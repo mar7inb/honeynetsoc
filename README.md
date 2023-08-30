@@ -26,11 +26,17 @@ I followed a two-day process: initially, I observed security-related measurement
 The design of the mini honeynet in Azure involves the following main parts:
 
 -Virtual Network (VNet): This creates a segmented network environment.
+
 -Network Security Group (NSG): It manages inbound and outbound traffic.
+
 -Virtual Machines (2 Windows and 1 Linux): These are the operating systems running in the network.
+
 -Log Analytics Workspace: It centralizes and manages log data.
+
 -Azure Key Vault: This securely stores sensitive information.
+
 -Azure Storage Account: It stores various types of data.
+
 -Microsoft Sentinel: A tool for advanced threat detection and response.
 
 For the "BEFORE" measurements, all resources were initially set up and made accessible from the internet. The Virtual Machines had unrestricted Network Security Groups and open firewalls, and other resources also had -public endpoints exposed to the internet. Private Endpoints weren't utilized.
