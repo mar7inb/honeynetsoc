@@ -54,8 +54,8 @@ For the "AFTER" measurements, Network Security Groups were made more secure by b
 ## Metrics Before Hardening / Security Controls
 
 The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+Start Time 2023-08-21 8:30 AM
+Stop Time 2023-08-22 8:32 AM
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -72,8 +72,8 @@ Stop Time 2023-03-16 17:04:29
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+Start Time 2023-08-18 5:30 PM
+Stop Time	2023-08-19 5:37 PM
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -85,6 +85,8 @@ Stop Time	2023-03-19 15:37
 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
+In this project, a small-scale honeynet was set up in Microsoft Azure. This network collected logs and information in a Log Analytics workspace. Microsoft Sentinel, a security tool, was utilized to spot potential issues and create records of these incidents based on the gathered data.
 
-It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+Moreover, the project involved measuring certain metrics in an unsafe environment prior to the implementation of security measures. After these measures were put in place, the metrics were measured again. Notably, there was a significant decrease in the number of security events and incidents, which demonstrated the effectiveness of the security controls.
+
+It's important to mention that if the network's resources were extensively used by regular users, it's likely that there would have been more security events and alerts generated during the 24-hour period after the security controls were implemented.
