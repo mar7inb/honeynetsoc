@@ -23,19 +23,19 @@ I followed a two-day process: initially, I observed security-related measurement
 ![afterhardeningsoc](https://github.com/mar7inb/honeynetsoc/assets/90795866/5616acd9-0eac-4e08-8cd4-9ab8ffd07702)
 
 
-The architecture of the mini honeynet in Azure consists of the following components:
+The design of the mini honeynet in Azure involves the following main parts:
 
-- Virtual Network (VNet)
-- Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
-- Log Analytics Workspace
-- Azure Key Vault
-- Azure Storage Account
-- Microsoft Sentinel
+-Virtual Network (VNet): This creates a segmented network environment.
+-Network Security Group (NSG): It manages inbound and outbound traffic.
+-Virtual Machines (2 Windows and 1 Linux): These are the operating systems running in the network.
+-Log Analytics Workspace: It centralizes and manages log data.
+-Azure Key Vault: This securely stores sensitive information.
+-Azure Storage Account: It stores various types of data.
+-Microsoft Sentinel: A tool for advanced threat detection and response.
 
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
+For the "BEFORE" measurements, all resources were initially set up and made accessible from the internet. The Virtual Machines had unrestricted Network Security Groups and open firewalls, and other resources also had -public endpoints exposed to the internet. Private Endpoints weren't utilized.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+For the "AFTER" measurements, Network Security Groups were made more secure by blocking all traffic except for that originating from my admin workstation. Additionally, other resources were safeguarded by their built-in firewalls and Private Endpoints were utilized.
 
 ## Attack Maps Before Hardening / Security Controls
 ![windows24insec](https://github.com/mar7inb/honeynetsoc/assets/90795866/951d8285-cb99-4414-9df4-2eca726ce551)
